@@ -493,17 +493,6 @@ function WhyChooseUs() {
         </motion.h2>
 
         <div className="relative">
-          {/* Central Lightbulb */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="hidden lg:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full items-center justify-center shadow-2xl z-10"
-          >
-            <Lightbulb className="w-16 h-16 text-white" />
-          </motion.div>
-
           {/* Reasons Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {reasons.map((reason, index) => (
