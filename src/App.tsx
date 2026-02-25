@@ -27,6 +27,7 @@ function Navigation() {
     { name: 'Products', href: '#products' },
     { name: 'Projects', href: '#projects' },
     { name: 'Partners', href: '#partners' },
+    { name: 'Certifications', href: '#certifications' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -162,6 +163,27 @@ function Hero() {
         >
           AN ISO 9001 - 2015 CERTIFIED COMPANY
         </motion.p>
+
+        {/* Certification Badges */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5, ease: 'easeOut' }}
+          className="flex flex-wrap justify-center gap-4 mb-8"
+        >
+          <div className="bg-white/10 backdrop-blur-md border-2 border-white/30 rounded-full px-6 py-3 flex items-center gap-2">
+            <Shield className="w-5 h-5 text-white" />
+            <span className="text-white font-semibold text-sm">FSAI Member</span>
+          </div>
+          <div className="bg-white/10 backdrop-blur-md border-2 border-white/30 rounded-full px-6 py-3 flex items-center gap-2">
+            <BadgeCheck className="w-5 h-5 text-white" />
+            <span className="text-white font-semibold text-sm">MSME Registered</span>
+          </div>
+          <div className="bg-white/10 backdrop-blur-md border-2 border-white/30 rounded-full px-6 py-3 flex items-center gap-2">
+            <Award className="w-5 h-5 text-white" />
+            <span className="text-white font-semibold text-sm">ISO 45001:2018</span>
+          </div>
+        </motion.div>
 
         {/* 20 Years Badge */}
         <motion.div
@@ -718,24 +740,6 @@ function Projects() {
 
 // Partners Section
 function Partners() {
-  const channelPartners = [
-    'Honeywell', 'SIEMENS', 'ABB', 'BOSCH', 'MINIMAX', 'CP PLUS', 
-    'HIKVISION', 'BAJAJ', 'AMARON', '3M', 'PHILIPS', 'MORLEY IAS',
-    'TYCO', 'SWITCHGEAR', 'GE', 'Schneider Electric', 'POLYCAB', 
-    'OMRON', 'Phi Audiocom', 'EDWARDS', 'SCHRACK', 'Ravel', 
-    'Simplex', 'PELCO', 'Xtralis', 'NOTIFIER', 'CRC', 'C&S Electric',
-    'KPT', 'KOBOLD', 'MOXA', 'CISCO'
-  ];
-
-  const businessPartners = [
-    'TATA STEEL', 'SAIL', 'LARSEN & TOUBRO', 'SIEMENS', 'JUSCO',
-    'NML', 'ABB', 'Honeywell', 'medanta', 'MECON', 'TMH',
-    'NMDC STEEL', 'THERMAX', 'BLUE STAR', 'TATA PROJECTS', 
-    'MINIMAX', 'AIR WATER', 'MIEPL', 'ISWP', 'PRIMETALS',
-    'Govt of Jharkhand', 'TATA POWER', 'TIMKEN', 'TATA BLUESCOPE',
-    'SONICO', 'EAPL', 'GE T&D', 'BHEL', 'PRAXAIR', 'Linde'
-  ];
-
   return (
     <section id="partners" className="py-16 md:py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -754,20 +758,15 @@ function Partners() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="flex flex-wrap justify-center gap-3 mb-16"
+          className="mb-16"
         >
-          {channelPartners.map((partner, index) => (
-            <motion.div
-              key={partner}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: index * 0.02 }}
-              className="px-4 py-2 bg-white rounded-full shadow-md text-sm font-medium text-gray-700 hover:shadow-lg hover:-translate-y-0.5 transition-all cursor-pointer"
-            >
-              {partner}
-            </motion.div>
-          ))}
+          <div className="bg-white rounded-2xl shadow-lg p-8 overflow-hidden">
+            <img
+              src="/pdf_images/page_10.png"
+              alt="Channel Partners Logos"
+              className="w-full h-auto"
+            />
+          </div>
         </motion.div>
 
         {/* Business Partners */}
@@ -785,20 +784,102 @@ function Partners() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="flex flex-wrap justify-center gap-3"
         >
-          {businessPartners.map((partner, index) => (
+          <div className="bg-white rounded-2xl shadow-lg p-8 overflow-hidden">
+            <img
+              src="/pdf_images/page_11.png"
+              alt="Satisfied Business Partners Logos"
+              className="w-full h-auto"
+            />
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+// Certifications & Memberships Section
+function Certifications() {
+  return (
+    <section id="certifications" className="py-16 md:py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="section-title"
+        >
+          Certifications & Memberships
+        </motion.h2>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+          className="max-w-4xl mx-auto"
+        >
+          <p className="text-gray-700 text-center mb-12 text-lg">
+            SC International is proud to be:
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* FSAI Membership */}
             <motion.div
-              key={partner}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: index * 0.02 }}
-              className="px-4 py-2 bg-primary text-white rounded-full shadow-md text-sm font-medium hover:bg-primary-dark hover:shadow-lg hover:-translate-y-0.5 transition-all cursor-pointer"
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-slate-50 rounded-2xl p-8 shadow-lg card-hover border-2 border-primary/10"
             >
-              {partner}
+              <div className="flex items-start gap-4">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Shield className="w-8 h-8 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-primary mb-3">FSAI Member</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    A registered member of the <span className="font-semibold">Fire and Security Association of India (FSAI)</span>, 
+                    actively contributing to industry safety standards and best practices.
+                  </p>
+                </div>
+              </div>
             </motion.div>
-          ))}
+
+            {/* MSME Registration */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="bg-slate-50 rounded-2xl p-8 shadow-lg card-hover border-2 border-primary/10"
+            >
+              <div className="flex items-start gap-4">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <BadgeCheck className="w-8 h-8 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-primary mb-3">MSME Registered</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    An <span className="font-semibold">MSME (Udyam) Registered Enterprise</span> under the Ministry of Micro, 
+                    Small & Medium Enterprises, Government of India.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="mt-8 text-center"
+          >
+            <p className="text-gray-600 italic">
+              These affiliations reflect our commitment to quality, compliance, and professional excellence in the fire and security industry.
+            </p>
+          </motion.div>
         </motion.div>
       </div>
     </section>
@@ -954,6 +1035,7 @@ function App() {
       <Products />
       <Projects />
       <Partners />
+      <Certifications />
       <Contact />
     </div>
   );
