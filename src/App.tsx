@@ -762,7 +762,7 @@ function Partners() {
         >
           <div className="bg-white rounded-2xl shadow-lg p-8 overflow-hidden">
             <img
-              src="/pdf_images/page_10.png"
+              src="/images/page_10.png"
               alt="Channel Partners Logos"
               className="w-full h-auto"
             />
@@ -787,7 +787,7 @@ function Partners() {
         >
           <div className="bg-white rounded-2xl shadow-lg p-8 overflow-hidden">
             <img
-              src="/pdf_images/page_11.png"
+              src="/images/page_11.png"
               alt="Satisfied Business Partners Logos"
               className="w-full h-auto"
             />
